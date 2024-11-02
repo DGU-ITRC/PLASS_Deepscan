@@ -29,7 +29,7 @@ RUN python3.9 get-pip.py
 # Install Python Library
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
-RUN pip install Pillow Flask Flask-Cors tenserflow>=2.0.0
+RUN pip install Pillow Flask Flask-Cors tensorflow>=2.0.0
 
 # Set the default command to run when the container starts
 WORKDIR /app
