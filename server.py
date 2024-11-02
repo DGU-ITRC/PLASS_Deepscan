@@ -5,8 +5,10 @@ from pathlib import Path
 from PIL import Image
 from flask import Flask, request, render_template
 from feature_extractor import FeatureExtractor
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 featureExtractor = FeatureExtractor()
 
 def get_features():
@@ -98,4 +100,4 @@ def inference():
     }
 
 if __name__=="__main__":
-    app.run("0.0.0.0")
+    app.run("0.0.0.0", port=50002)
